@@ -11,6 +11,8 @@ function App () {
   useEffect(() => {
     getTextToShow().then((response) => {
       setTextToShow(response)
+    }).catch((err) => {
+      setTextToShow(err)
     })
   }, [])
   return (
