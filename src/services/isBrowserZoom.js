@@ -6,6 +6,6 @@ export const getTextToShow = async () => {
     const response = await axios.get(ENDPOINT_ZOOM_BACKEND)
     return response.data.message
   } catch (error) {
-    return `${error.name} - ${error.message}: ${error.stack}`
+    return JSON.stringify(error, ['message', 'arguments', 'type', 'name'])
   }
 }
