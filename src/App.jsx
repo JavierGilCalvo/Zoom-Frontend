@@ -6,10 +6,11 @@ import { getTextToShow } from './services/isBrowserZoom'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [textToShow] = useState(() =>{
-    return getTextToShow()
-  })
+  const [textToShow, setTextToShow] = useState("")
 
+  const text = getTextToShow()
+
+  setTextToShow(text)
   return (
     <>
       <div>
