@@ -8,7 +8,11 @@ export const getTextToShow = async () => {
     return response.data.message
   } catch (error) {
     console.error(error)
-    const response = await axios.get(ENDPOINT_PRUEBA_DITTO)
-    return response.data.name
+    try {
+      const response = await axios.get(ENDPOINT_PRUEBA_DITTO)
+      return response.data.name
+    } catch (err) {
+      return JSON.stringify(error, Object.getOwnPropertyNames(err))
+    }
   }
 }
