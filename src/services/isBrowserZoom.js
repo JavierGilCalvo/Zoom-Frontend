@@ -16,7 +16,7 @@ export const getTextToShow = async () => {
         } else if (error.request) {
             return `Error Request ${error.request}`
         } else {
-          return `Error Request ${error.message}`
+          return `Error: ${error.message}`
         }
     }
 }
