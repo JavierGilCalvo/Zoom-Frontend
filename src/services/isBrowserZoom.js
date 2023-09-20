@@ -5,7 +5,7 @@ const ENDPOINT_ZOOM_BACKEND = 'https://wijjw4sa31.execute-api.us-east-1.amazonaw
 export const getTextToShow = async () => {
   try {
         const response = await fetch(ENDPOINT_ZOOM_BACKEND, {
-          method: 'get',
+          method: 'GET',
           withCredentials: false,
           headers: {
             'Access-Control-Allow-Origin': '*'
