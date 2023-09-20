@@ -8,8 +8,7 @@ export const getTextToShow = async () => {
           method: 'get',
           withCredentials: false,
           headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json'
+            'Access-Control-Allow-Origin': '*'
           }
         })
         console.log(response)
