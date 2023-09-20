@@ -14,7 +14,7 @@ export const getTextToShow = async () => {
             console.log('Headers', error.response.headers)
             return `Data: ${error.response.data} - Status: ${error.response.status} - Headers: ${error.response.headers}`
         } else if (error.request) {
-            return `Error Request ${error.request}`
+            return `Error Request ${JSON.stringify(error.request)}`
         } else {
           return `Error: ${error.message}`
         }
