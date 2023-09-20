@@ -9,11 +9,7 @@ function App () {
   const [textToShow, setTextToShow] = useState('Vite + React')
 
   useEffect(() => {
-    getTextToShow().then((response) => {
-      setTextToShow(response)
-    }).catch((err) => {
-      setTextToShow(err)
-    })
+    setTextToShow(getTextToShow())
   }, [])
   return (
     <>
