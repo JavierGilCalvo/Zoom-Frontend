@@ -4,7 +4,7 @@ const ENDPOINT_ZOOM_BACKEND = 'https://wijjw4sa31.execute-api.us-east-1.amazonaw
 // const ENDPOINT_PRUEBA_DITTO = 'https://pokeapi.co/api/v2/pokemon/ditto'
 export const getTextToShow = async () => {
   try {
-    const response = await fetch(ENDPOINT_ZOOM_BACKEND, { mode: 'cors' }) // axios.get(ENDPOINT_ZOOM_BACKEND);
+    const response = await axios.get(ENDPOINT_ZOOM_BACKEND) // fetch(ENDPOINT_ZOOM_BACKEND, { mode: 'cors' })
     console.log(response)
     return response.data.message
   } catch (error) {
