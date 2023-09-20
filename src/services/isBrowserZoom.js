@@ -8,7 +8,8 @@ export const getTextToShow = async () => {
         console.log(response)
         return response.data.message
     } catch (error) {
-        if (error.response) {
+      return `Error Request ${JSON.stringify(error)}`
+        /*if (error.response) {
             console.log('Data', error.response.data)
             console.log('Status', error.response.status)
             console.log('Headers', error.response.headers)
@@ -17,6 +18,6 @@ export const getTextToShow = async () => {
             return `Error Request ${JSON.stringify(error.request)}`
         } else {
           return `Error: ${error.message}`
-        }
+        }*/
     }
 }
